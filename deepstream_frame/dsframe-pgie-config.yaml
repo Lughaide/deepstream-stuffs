@@ -1,0 +1,22 @@
+property:
+  gpu-id: 0
+  net-scale-factor: 0.0039215697906911373
+  
+  gie-unique-id: 1
+  network-type: 0
+  network-mode: 0
+  model-engine-file: ../resnet10.caffemodel_b4_gpu0_int8.engine
+  labelfile-path: ../labels.txt
+  num-detected-classes: 4
+  output-blob-names: conv2d_bbox;conv2d_cov/Sigmoid
+  
+  batch-size: 4
+  force-implicit-batch-dim: 1
+  interval: 0
+  cluster-mode: 2
+
+class-attrs-all:
+  pre-cluster-threshold: 0.2
+  topk: 10
+  nms-iou-threshold: 0.5
+
