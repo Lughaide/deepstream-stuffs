@@ -160,7 +160,6 @@ static GstPadProbeReturn tiler_src_pad_buffer_probe (GstPad * pad, GstPadProbeIn
 
 int main(int argc, char *argv[]) {
     std::cout << "Begin program.\n";
-    std::ios_base::sync_with_stdio(false);
     GMainLoop *loop = NULL;
     GstElement *pipeline = NULL, *source = NULL, *h264parser = NULL,
         *decoder = NULL, *streammux = NULL, *sink = NULL,
