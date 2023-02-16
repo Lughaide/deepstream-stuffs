@@ -1,0 +1,24 @@
+source-list:
+  list: >-
+    file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_720p.mp4;file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_qHD.mp4;file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_cam6.mp4;file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4
+
+streammux:
+  batch-size: 4
+  batched-push-timeout: 40000
+  width: 1920
+  height: 1080
+
+osd:
+  process-mode: 0
+  display-text: 0
+
+tiler:
+  width: 1280
+  height: 720
+
+sink:
+  qos: 0
+
+primary-gie:
+  plugin-type: 0
+  config-file-path: dsframe-pgie-config.yaml

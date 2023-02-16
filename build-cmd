@@ -1,0 +1,5 @@
+g++ deepstream_frame.cpp -o deepstream_frame_app `pkg-config --cflags --libs gstreamer-1.0` \
+-I/usr/local/cuda/targets/aarch64-linux/include/ -I/opt/nvidia/deepstream/deepstream/sources/includes/ \
+-L/usr/local/cuda/lib64/ -lcudart \
+-L/opt/nvidia/deepstream/deepstream/lib/ -lnvdsgst_meta -lnvds_meta -lnvds_yml_parser \
+-lcuda -Wl,-rpath,/opt/nvidia/deepstream/deepstream/lib/
